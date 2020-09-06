@@ -31,6 +31,9 @@
 #include <sys/stat.h>
 #include <inttypes.h>
 
+#ifndef CPIO_H
+#define CPIO_H
+
 enum	{
 	FMT_NONE	= 00000000,	/* no format chosen yet */
 
@@ -230,3 +233,5 @@ extern int	pax_track(const char *, time_t);
 extern void	pax_prlink(struct file *);
 extern int	pax_sname(char **, size_t *);
 extern void	pax_onexit(void);
+
+#endif
